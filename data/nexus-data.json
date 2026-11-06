@@ -1,0 +1,1492 @@
+{
+ "Start Here": [
+  {
+   "Key": "Purpose",
+   "Value": "Fictional data for product-design prototype only. No real PHI."
+  },
+  {
+   "Key": "Coverage",
+   "Value": "Five patient archetypes; 11 data categories per patient; deliberate data-quality imperfections."
+  },
+  {
+   "Key": "Priority formula",
+   "Value": "0.40 × acuity + 0.25 × time sensitivity + 0.20 × care-gap severity + 0.15 × access barriers."
+  },
+  {
+   "Key": "Guardrail",
+   "Value": "Operational queue ranking only; NOT a validated clinical risk score or diagnosis."
+  },
+  {
+   "Key": "Bands",
+   "Value": "High ≥75; Medium 50–74; Routine <50. Thresholds are hypotheses for clinical governance."
+  },
+  {
+   "Key": "Demo",
+   "Value": "Simulated events only; no live EHR, hospital, pharmacy or payer integration."
+  },
+  {
+   "Key": "Tabs",
+   "Value": "Patient 360; Source Records; Data Dictionary; Priority Model; Task Queue; KPI Definitions; Risks; Benchmarks."
+  },
+  {
+   "Key": "Updated scope",
+   "Value": "Workbook now includes caregiver/contact routing, call recording/transcription workflow, AI Copilot controls, RICE feature scoring and MoSCoW data priorities."
+  },
+  {
+   "Key": "Contact privacy",
+   "Value": "Emergency contact is not automatically authorised to receive PHI. Verify role, member permission or legal representative authority and limit disclosure to relevant scope."
+  },
+  {
+   "Key": "Recording",
+   "Value": "Recording/transcription is OFF by default; enable only after jurisdiction, policy and consent checks. Manual notes remain available."
+  },
+  {
+   "Key": "AI Copilot",
+   "Value": "Persistent, context-aware side panel. Read-only grounded Q&A and draft assistance; no autonomous clinical actions."
+  },
+  {
+   "Key": "RICE assumptions",
+   "Value": "Reach = estimated case managers affected per quarter in a reference cohort of 100; impact scale 0.25/0.5/1/2/3; confidence is a percentage; effort is person-weeks. Scores are directional hypotheses."
+  },
+  {
+   "Key": "MoSCoW",
+   "Value": "MUST / SHOULD / COULD / WON'T HAVE IN MVP is used for data/integration scope. Do not confuse with permanent product strategy."
+  },
+  {
+   "Key": "Priority score",
+   "Value": "Existing patient scores preserved: NX-001 85.8; NX-002 61.8; NX-003 81.0; NX-004 65.9; NX-005 76.0."
+  },
+  {
+   "Key": "Disclaimer",
+   "Value": "Synthetic contacts/phone numbers only. Do not use real PHI in unapproved tools or demo integrations."
+  }
+ ],
+ "Patient 360": [
+  {
+   "Member ID": "NX-001",
+   "Name": "John Mitchell",
+   "Age": 74,
+   "Programme": "Transitions of Care",
+   "Conditions": "Heart failure; Type 2 diabetes",
+   "Trigger": "New hospital discharge",
+   "Clinical acuity": 95,
+   "Time sensitivity": 90,
+   "Care-gap severity": 85,
+   "Access barriers": 55,
+   "Language": "English",
+   "State": "Ohio",
+   "Case manager": "Maria Chen",
+   "Phone status": "Verified",
+   "Medication context": "Discharge list 40 mg vs older EHR 20 mg",
+   "Medication status": "Conflict — verify",
+   "Appointment status": "No follow-up found",
+   "SDOH context": "Transport sometimes difficult",
+   "Data-quality issue": "Claims feed 32 days old; medication conflict",
+   "Next best action": "Call today; reconcile medication; confirm follow-up; assess transport",
+   "Priority score": 85.8,
+   "Priority band": "High",
+   "Case status": "Recently discharged",
+   "Primary contact route": "Member first",
+   "Primary contact availability": "Weekdays 08:00–18:00 (synthetic)",
+   "Alternate contact name": "Ellen Mitchell",
+   "Relationship": "Spouse",
+   "Contact role type": "Member-designated care contact",
+   "Authorisation / permission status": "Documented permission on file — limited scope",
+   "Permitted disclosure scope": "Discharge coordination, transport and medication access logistics only",
+   "Alternate contact phone (fictional)": "(555) 0191",
+   "Alternate contact window": "Weekdays 09:00–17:00",
+   "Routing recommendation": "Call John first; if unavailable, contact Ellen only for permitted logistics; verify before discussing clinical details",
+   "Last permission review": "2026-10-20"
+  },
+  {
+   "Member ID": "NX-002",
+   "Name": "Evelyn Brooks",
+   "Age": 68,
+   "Programme": "Diabetes Management",
+   "Conditions": "Type 2 diabetes; hypertension",
+   "Trigger": "Rising-risk review",
+   "Clinical acuity": 62,
+   "Time sensitivity": 55,
+   "Care-gap severity": 90,
+   "Access barriers": 35,
+   "Language": "English",
+   "State": "Ohio",
+   "Case manager": "Maria Chen",
+   "Phone status": "Verified",
+   "Medication context": "Metformin refill gap suspected; last fill 75 days ago",
+   "Medication status": "Potential gap — confirm",
+   "Appointment status": "PCP visit in 12 days",
+   "SDOH context": "Food access concern reported 5 months ago",
+   "Data-quality issue": "Latest HbA1c missing; pharmacy feed delayed",
+   "Next best action": "Confirm medication access; request current HbA1c; discuss food support",
+   "Priority score": 61.8,
+   "Priority band": "Medium",
+   "Case status": "Community active",
+   "Primary contact route": "Member first",
+   "Primary contact availability": "Weekdays 09:00–19:00 (synthetic)",
+   "Alternate contact name": "Laura Brooks",
+   "Relationship": "Sister",
+   "Contact role type": "Member-designated care contact",
+   "Authorisation / permission status": "Documented permission on file — limited scope",
+   "Permitted disclosure scope": "Appointment logistics and transport coordination; no broader clinical disclosure",
+   "Alternate contact phone (fictional)": "(555) 0192",
+   "Alternate contact window": "Weekdays 17:00–20:00",
+   "Routing recommendation": "Call Evelyn first; use Laura only for permitted scheduling/logistics after unsuccessful member contact",
+   "Last permission review": "2026-10-25"
+  },
+  {
+   "Member ID": "NX-003",
+   "Name": "Robert Hayes",
+   "Age": 71,
+   "Programme": "Frequent ED Utilisation",
+   "Conditions": "COPD; hypertension",
+   "Trigger": "Repeated ED visits",
+   "Clinical acuity": 88,
+   "Time sensitivity": 70,
+   "Care-gap severity": 70,
+   "Access barriers": 95,
+   "Language": "English",
+   "State": "Ohio",
+   "Case manager": "David Ortiz",
+   "Phone status": "Disconnected",
+   "Medication context": "Inhaler in EHR; no recent fill evidence",
+   "Medication status": "Unconfirmed",
+   "Appointment status": "No PCP follow-up found",
+   "SDOH context": "Lives alone; transport barrier",
+   "Data-quality issue": "Possible duplicate identity NX-003A",
+   "Next best action": "Resolve identity; verify alternate consented contact; coordinate PCP follow-up",
+   "Priority score": 81,
+   "Priority band": "High",
+   "Case status": "Recent ED / community",
+   "Primary contact route": "Member currently unreachable",
+   "Primary contact availability": "Evenings preferred; primary number disconnected",
+   "Alternate contact name": "James Hayes",
+   "Relationship": "Adult son",
+   "Contact role type": "Member-designated care contact",
+   "Authorisation / permission status": "Permission recorded; reconfirm identity and scope before disclosure",
+   "Permitted disclosure scope": "Assist with contact coordination; share only information directly relevant to authorised involvement",
+   "Alternate contact phone (fictional)": "(555) 0193",
+   "Alternate contact window": "Weekdays 17:00–20:00",
+   "Routing recommendation": "Do not retry disconnected number repeatedly; verify member identity and permission, then contact James for outreach coordination only",
+   "Last permission review": "2026-10-15"
+  },
+  {
+   "Member ID": "NX-004",
+   "Name": "Alicia Rivera",
+   "Age": 43,
+   "Programme": "Behavioural Health & Social Support",
+   "Conditions": "Depression; housing instability",
+   "Trigger": "Care-plan review",
+   "Clinical acuity": 58,
+   "Time sensitivity": 45,
+   "Care-gap severity": 82,
+   "Access barriers": 100,
+   "Language": "Spanish",
+   "State": "Ohio",
+   "Case manager": "Maria Chen",
+   "Phone status": "Unverified",
+   "Medication context": "Current medication use unknown",
+   "Medication status": "Patient confirmation needed",
+   "Appointment status": "Behavioural-health follow-up unconfirmed",
+   "SDOH context": "Housing instability; food access concern",
+   "Data-quality issue": "SDOH screen 7 months old; contact preference unverified",
+   "Next best action": "Use approved Spanish outreach; reconfirm safe contact; offer social-work referral",
+   "Priority score": 65.9,
+   "Priority band": "Medium",
+   "Case status": "Community active — privacy-sensitive",
+   "Primary contact route": "Member-only until safe channel confirmed",
+   "Primary contact availability": "Unknown; safe channel not verified",
+   "Alternate contact name": "None on file",
+   "Relationship": "—",
+   "Contact role type": "No alternate contact authorised",
+   "Authorisation / permission status": "No third-party permission recorded",
+   "Permitted disclosure scope": "No PHI disclosure to family / contacts",
+   "Alternate contact phone (fictional)": "—",
+   "Alternate contact window": "—",
+   "Routing recommendation": "Do not contact family; verify safe, approved channel with member or supervisor first",
+   "Last permission review": "Not recorded"
+  },
+  {
+   "Member ID": "NX-005",
+   "Name": "Nina Patel",
+   "Age": 32,
+   "Programme": "High-Risk Maternity",
+   "Conditions": "High-risk pregnancy; gestational hypertension",
+   "Trigger": "Maternity programme alert",
+   "Clinical acuity": 82,
+   "Time sensitivity": 75,
+   "Care-gap severity": 68,
+   "Access barriers": 72,
+   "Language": "English",
+   "State": "Ohio",
+   "Case manager": "David Ortiz",
+   "Phone status": "Verified",
+   "Medication context": "Instructions require care-team confirmation",
+   "Medication status": "Care-team verification required",
+   "Appointment status": "High-risk follow-up feed delayed",
+   "SDOH context": "Transport support may be needed",
+   "Data-quality issue": "Appointment feed delayed; transport need unconfirmed",
+   "Next best action": "Confirm appointment with maternity team; assess transport; document follow-up",
+   "Priority score": 76,
+   "Priority band": "High",
+   "Case status": "High-risk maternity — community",
+   "Primary contact route": "Member first",
+   "Primary contact availability": "Weekdays 08:00–18:00; evenings by preference (synthetic)",
+   "Alternate contact name": "Arjun Patel",
+   "Relationship": "Spouse",
+   "Contact role type": "Member-designated care contact",
+   "Authorisation / permission status": "Documented permission on file — limited scope",
+   "Permitted disclosure scope": "Appointment and transport logistics only; clinical details remain member-directed unless separately authorised",
+   "Alternate contact phone (fictional)": "(555) 0195",
+   "Alternate contact window": "Weekdays 18:00–20:00",
+   "Routing recommendation": "Contact Nina first; Arjun may assist with logistics if permitted; verify before any clinical disclosure",
+   "Last permission review": "2026-10-22"
+  }
+ ],
+ "Source Records": [
+  {
+   "Member ID": "NX-001",
+   "Dataset": "Member & eligibility",
+   "Source": "Payer membership",
+   "Sample fact": "Identity, age, programme, language",
+   "Quality flag": "Matched",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Confirm identity and eligibility"
+  },
+  {
+   "Member ID": "NX-001",
+   "Dataset": "ADT / event",
+   "Source": "Hospital event feed",
+   "Sample fact": "New hospital discharge",
+   "Quality flag": "New event",
+   "Freshness (illustrative)": "Near-real-time simulated",
+   "What nurse should do": "Open / refresh case"
+  },
+  {
+   "Member ID": "NX-001",
+   "Dataset": "Clinical / EHR",
+   "Source": "Provider EHR",
+   "Sample fact": "Heart failure; Type 2 diabetes",
+   "Quality flag": "Structured + narrative",
+   "Freshness (illustrative)": "1 day simulated",
+   "What nurse should do": "Review clinical context"
+  },
+  {
+   "Member ID": "NX-001",
+   "Dataset": "Medication / pharmacy",
+   "Source": "PBM / pharmacy feed",
+   "Sample fact": "Discharge list 40 mg vs older EHR 20 mg",
+   "Quality flag": "Conflict / uncertain",
+   "Freshness (illustrative)": "3 days simulated",
+   "What nurse should do": "Verify with patient / care team"
+  },
+  {
+   "Member ID": "NX-001",
+   "Dataset": "Claims",
+   "Source": "Payer claims",
+   "Sample fact": "Historical utilisation snapshot",
+   "Quality flag": "Delayed by design",
+   "Freshness (illustrative)": "32 days simulated",
+   "What nurse should do": "Use for history, not live status"
+  },
+  {
+   "Member ID": "NX-001",
+   "Dataset": "Labs & vitals",
+   "Source": "Lab / EHR",
+   "Sample fact": "Latest available lab / vital summary",
+   "Quality flag": "May be incomplete",
+   "Freshness (illustrative)": "1–16 days simulated",
+   "What nurse should do": "Request missing result if relevant"
+  },
+  {
+   "Member ID": "NX-001",
+   "Dataset": "Contact history",
+   "Source": "CRM / case notes",
+   "Sample fact": "Verified",
+   "Quality flag": "Contact validity varies",
+   "Freshness (illustrative)": "Varies",
+   "What nurse should do": "Verify preferred channel and consent"
+  },
+  {
+   "Member ID": "NX-001",
+   "Dataset": "SDOH",
+   "Source": "HRA / social needs screen",
+   "Sample fact": "Transport sometimes difficult",
+   "Quality flag": "Self-reported; may be stale",
+   "Freshness (illustrative)": "7 months simulated",
+   "What nurse should do": "Reconfirm before referral"
+  },
+  {
+   "Member ID": "NX-001",
+   "Dataset": "Appointments",
+   "Source": "Provider scheduling",
+   "Sample fact": "No follow-up found",
+   "Quality flag": "Feed may be incomplete",
+   "Freshness (illustrative)": "1 day / delayed",
+   "What nurse should do": "'Not found' does not mean not scheduled"
+  },
+  {
+   "Member ID": "NX-001",
+   "Dataset": "Care plan & tasks",
+   "Source": "Care management",
+   "Sample fact": "Call today; reconcile medication; confirm follow-up; assess transport",
+   "Quality flag": "Draft recommendation",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Nurse review and approve"
+  },
+  {
+   "Member ID": "NX-001",
+   "Dataset": "Identity resolution",
+   "Source": "Master member index",
+   "Sample fact": "Claims feed 32 days old; medication conflict",
+   "Quality flag": "Potential exception",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Resolve before merge or action"
+  },
+  {
+   "Member ID": "NX-002",
+   "Dataset": "Member & eligibility",
+   "Source": "Payer membership",
+   "Sample fact": "Identity, age, programme, language",
+   "Quality flag": "Matched",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Confirm identity and eligibility"
+  },
+  {
+   "Member ID": "NX-002",
+   "Dataset": "ADT / event",
+   "Source": "Hospital event feed",
+   "Sample fact": "Rising-risk review",
+   "Quality flag": "New event",
+   "Freshness (illustrative)": "Near-real-time simulated",
+   "What nurse should do": "Open / refresh case"
+  },
+  {
+   "Member ID": "NX-002",
+   "Dataset": "Clinical / EHR",
+   "Source": "Provider EHR",
+   "Sample fact": "Type 2 diabetes; hypertension",
+   "Quality flag": "Structured + narrative",
+   "Freshness (illustrative)": "1 day simulated",
+   "What nurse should do": "Review clinical context"
+  },
+  {
+   "Member ID": "NX-002",
+   "Dataset": "Medication / pharmacy",
+   "Source": "PBM / pharmacy feed",
+   "Sample fact": "Metformin refill gap suspected; last fill 75 days ago",
+   "Quality flag": "Conflict / uncertain",
+   "Freshness (illustrative)": "3 days simulated",
+   "What nurse should do": "Verify with patient / care team"
+  },
+  {
+   "Member ID": "NX-002",
+   "Dataset": "Claims",
+   "Source": "Payer claims",
+   "Sample fact": "Historical utilisation snapshot",
+   "Quality flag": "Delayed by design",
+   "Freshness (illustrative)": "32 days simulated",
+   "What nurse should do": "Use for history, not live status"
+  },
+  {
+   "Member ID": "NX-002",
+   "Dataset": "Labs & vitals",
+   "Source": "Lab / EHR",
+   "Sample fact": "Latest available lab / vital summary",
+   "Quality flag": "May be incomplete",
+   "Freshness (illustrative)": "1–16 days simulated",
+   "What nurse should do": "Request missing result if relevant"
+  },
+  {
+   "Member ID": "NX-002",
+   "Dataset": "Contact history",
+   "Source": "CRM / case notes",
+   "Sample fact": "Verified",
+   "Quality flag": "Contact validity varies",
+   "Freshness (illustrative)": "Varies",
+   "What nurse should do": "Verify preferred channel and consent"
+  },
+  {
+   "Member ID": "NX-002",
+   "Dataset": "SDOH",
+   "Source": "HRA / social needs screen",
+   "Sample fact": "Food access concern reported 5 months ago",
+   "Quality flag": "Self-reported; may be stale",
+   "Freshness (illustrative)": "7 months simulated",
+   "What nurse should do": "Reconfirm before referral"
+  },
+  {
+   "Member ID": "NX-002",
+   "Dataset": "Appointments",
+   "Source": "Provider scheduling",
+   "Sample fact": "PCP visit in 12 days",
+   "Quality flag": "Feed may be incomplete",
+   "Freshness (illustrative)": "1 day / delayed",
+   "What nurse should do": "'Not found' does not mean not scheduled"
+  },
+  {
+   "Member ID": "NX-002",
+   "Dataset": "Care plan & tasks",
+   "Source": "Care management",
+   "Sample fact": "Confirm medication access; request current HbA1c; discuss food support",
+   "Quality flag": "Draft recommendation",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Nurse review and approve"
+  },
+  {
+   "Member ID": "NX-002",
+   "Dataset": "Identity resolution",
+   "Source": "Master member index",
+   "Sample fact": "Latest HbA1c missing; pharmacy feed delayed",
+   "Quality flag": "Potential exception",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Resolve before merge or action"
+  },
+  {
+   "Member ID": "NX-003",
+   "Dataset": "Member & eligibility",
+   "Source": "Payer membership",
+   "Sample fact": "Identity, age, programme, language",
+   "Quality flag": "Matched",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Confirm identity and eligibility"
+  },
+  {
+   "Member ID": "NX-003",
+   "Dataset": "ADT / event",
+   "Source": "Hospital event feed",
+   "Sample fact": "Repeated ED visits",
+   "Quality flag": "New event",
+   "Freshness (illustrative)": "Near-real-time simulated",
+   "What nurse should do": "Open / refresh case"
+  },
+  {
+   "Member ID": "NX-003",
+   "Dataset": "Clinical / EHR",
+   "Source": "Provider EHR",
+   "Sample fact": "COPD; hypertension",
+   "Quality flag": "Structured + narrative",
+   "Freshness (illustrative)": "1 day simulated",
+   "What nurse should do": "Review clinical context"
+  },
+  {
+   "Member ID": "NX-003",
+   "Dataset": "Medication / pharmacy",
+   "Source": "PBM / pharmacy feed",
+   "Sample fact": "Inhaler in EHR; no recent fill evidence",
+   "Quality flag": "Conflict / uncertain",
+   "Freshness (illustrative)": "3 days simulated",
+   "What nurse should do": "Verify with patient / care team"
+  },
+  {
+   "Member ID": "NX-003",
+   "Dataset": "Claims",
+   "Source": "Payer claims",
+   "Sample fact": "Historical utilisation snapshot",
+   "Quality flag": "Delayed by design",
+   "Freshness (illustrative)": "32 days simulated",
+   "What nurse should do": "Use for history, not live status"
+  },
+  {
+   "Member ID": "NX-003",
+   "Dataset": "Labs & vitals",
+   "Source": "Lab / EHR",
+   "Sample fact": "Latest available lab / vital summary",
+   "Quality flag": "May be incomplete",
+   "Freshness (illustrative)": "1–16 days simulated",
+   "What nurse should do": "Request missing result if relevant"
+  },
+  {
+   "Member ID": "NX-003",
+   "Dataset": "Contact history",
+   "Source": "CRM / case notes",
+   "Sample fact": "Disconnected",
+   "Quality flag": "Contact validity varies",
+   "Freshness (illustrative)": "Varies",
+   "What nurse should do": "Verify preferred channel and consent"
+  },
+  {
+   "Member ID": "NX-003",
+   "Dataset": "SDOH",
+   "Source": "HRA / social needs screen",
+   "Sample fact": "Lives alone; transport barrier",
+   "Quality flag": "Self-reported; may be stale",
+   "Freshness (illustrative)": "7 months simulated",
+   "What nurse should do": "Reconfirm before referral"
+  },
+  {
+   "Member ID": "NX-003",
+   "Dataset": "Appointments",
+   "Source": "Provider scheduling",
+   "Sample fact": "No PCP follow-up found",
+   "Quality flag": "Feed may be incomplete",
+   "Freshness (illustrative)": "1 day / delayed",
+   "What nurse should do": "'Not found' does not mean not scheduled"
+  },
+  {
+   "Member ID": "NX-003",
+   "Dataset": "Care plan & tasks",
+   "Source": "Care management",
+   "Sample fact": "Resolve identity; verify alternate consented contact; coordinate PCP follow-up",
+   "Quality flag": "Draft recommendation",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Nurse review and approve"
+  },
+  {
+   "Member ID": "NX-003",
+   "Dataset": "Identity resolution",
+   "Source": "Master member index",
+   "Sample fact": "Possible duplicate identity NX-003A",
+   "Quality flag": "Potential exception",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Resolve before merge or action"
+  },
+  {
+   "Member ID": "NX-004",
+   "Dataset": "Member & eligibility",
+   "Source": "Payer membership",
+   "Sample fact": "Identity, age, programme, language",
+   "Quality flag": "Matched",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Confirm identity and eligibility"
+  },
+  {
+   "Member ID": "NX-004",
+   "Dataset": "ADT / event",
+   "Source": "Hospital event feed",
+   "Sample fact": "Care-plan review",
+   "Quality flag": "New event",
+   "Freshness (illustrative)": "Near-real-time simulated",
+   "What nurse should do": "Open / refresh case"
+  },
+  {
+   "Member ID": "NX-004",
+   "Dataset": "Clinical / EHR",
+   "Source": "Provider EHR",
+   "Sample fact": "Depression; housing instability",
+   "Quality flag": "Structured + narrative",
+   "Freshness (illustrative)": "1 day simulated",
+   "What nurse should do": "Review clinical context"
+  },
+  {
+   "Member ID": "NX-004",
+   "Dataset": "Medication / pharmacy",
+   "Source": "PBM / pharmacy feed",
+   "Sample fact": "Current medication use unknown",
+   "Quality flag": "Conflict / uncertain",
+   "Freshness (illustrative)": "3 days simulated",
+   "What nurse should do": "Verify with patient / care team"
+  },
+  {
+   "Member ID": "NX-004",
+   "Dataset": "Claims",
+   "Source": "Payer claims",
+   "Sample fact": "Historical utilisation snapshot",
+   "Quality flag": "Delayed by design",
+   "Freshness (illustrative)": "32 days simulated",
+   "What nurse should do": "Use for history, not live status"
+  },
+  {
+   "Member ID": "NX-004",
+   "Dataset": "Labs & vitals",
+   "Source": "Lab / EHR",
+   "Sample fact": "Latest available lab / vital summary",
+   "Quality flag": "May be incomplete",
+   "Freshness (illustrative)": "1–16 days simulated",
+   "What nurse should do": "Request missing result if relevant"
+  },
+  {
+   "Member ID": "NX-004",
+   "Dataset": "Contact history",
+   "Source": "CRM / case notes",
+   "Sample fact": "Unverified",
+   "Quality flag": "Contact validity varies",
+   "Freshness (illustrative)": "Varies",
+   "What nurse should do": "Verify preferred channel and consent"
+  },
+  {
+   "Member ID": "NX-004",
+   "Dataset": "SDOH",
+   "Source": "HRA / social needs screen",
+   "Sample fact": "Housing instability; food access concern",
+   "Quality flag": "Self-reported; may be stale",
+   "Freshness (illustrative)": "7 months simulated",
+   "What nurse should do": "Reconfirm before referral"
+  },
+  {
+   "Member ID": "NX-004",
+   "Dataset": "Appointments",
+   "Source": "Provider scheduling",
+   "Sample fact": "Behavioural-health follow-up unconfirmed",
+   "Quality flag": "Feed may be incomplete",
+   "Freshness (illustrative)": "1 day / delayed",
+   "What nurse should do": "'Not found' does not mean not scheduled"
+  },
+  {
+   "Member ID": "NX-004",
+   "Dataset": "Care plan & tasks",
+   "Source": "Care management",
+   "Sample fact": "Use approved Spanish outreach; reconfirm safe contact; offer social-work referral",
+   "Quality flag": "Draft recommendation",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Nurse review and approve"
+  },
+  {
+   "Member ID": "NX-004",
+   "Dataset": "Identity resolution",
+   "Source": "Master member index",
+   "Sample fact": "SDOH screen 7 months old; contact preference unverified",
+   "Quality flag": "Potential exception",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Resolve before merge or action"
+  },
+  {
+   "Member ID": "NX-005",
+   "Dataset": "Member & eligibility",
+   "Source": "Payer membership",
+   "Sample fact": "Identity, age, programme, language",
+   "Quality flag": "Matched",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Confirm identity and eligibility"
+  },
+  {
+   "Member ID": "NX-005",
+   "Dataset": "ADT / event",
+   "Source": "Hospital event feed",
+   "Sample fact": "Maternity programme alert",
+   "Quality flag": "New event",
+   "Freshness (illustrative)": "Near-real-time simulated",
+   "What nurse should do": "Open / refresh case"
+  },
+  {
+   "Member ID": "NX-005",
+   "Dataset": "Clinical / EHR",
+   "Source": "Provider EHR",
+   "Sample fact": "High-risk pregnancy; gestational hypertension",
+   "Quality flag": "Structured + narrative",
+   "Freshness (illustrative)": "1 day simulated",
+   "What nurse should do": "Review clinical context"
+  },
+  {
+   "Member ID": "NX-005",
+   "Dataset": "Medication / pharmacy",
+   "Source": "PBM / pharmacy feed",
+   "Sample fact": "Instructions require care-team confirmation",
+   "Quality flag": "Conflict / uncertain",
+   "Freshness (illustrative)": "3 days simulated",
+   "What nurse should do": "Verify with patient / care team"
+  },
+  {
+   "Member ID": "NX-005",
+   "Dataset": "Claims",
+   "Source": "Payer claims",
+   "Sample fact": "Historical utilisation snapshot",
+   "Quality flag": "Delayed by design",
+   "Freshness (illustrative)": "32 days simulated",
+   "What nurse should do": "Use for history, not live status"
+  },
+  {
+   "Member ID": "NX-005",
+   "Dataset": "Labs & vitals",
+   "Source": "Lab / EHR",
+   "Sample fact": "Latest available lab / vital summary",
+   "Quality flag": "May be incomplete",
+   "Freshness (illustrative)": "1–16 days simulated",
+   "What nurse should do": "Request missing result if relevant"
+  },
+  {
+   "Member ID": "NX-005",
+   "Dataset": "Contact history",
+   "Source": "CRM / case notes",
+   "Sample fact": "Verified",
+   "Quality flag": "Contact validity varies",
+   "Freshness (illustrative)": "Varies",
+   "What nurse should do": "Verify preferred channel and consent"
+  },
+  {
+   "Member ID": "NX-005",
+   "Dataset": "SDOH",
+   "Source": "HRA / social needs screen",
+   "Sample fact": "Transport support may be needed",
+   "Quality flag": "Self-reported; may be stale",
+   "Freshness (illustrative)": "7 months simulated",
+   "What nurse should do": "Reconfirm before referral"
+  },
+  {
+   "Member ID": "NX-005",
+   "Dataset": "Appointments",
+   "Source": "Provider scheduling",
+   "Sample fact": "High-risk follow-up feed delayed",
+   "Quality flag": "Feed may be incomplete",
+   "Freshness (illustrative)": "1 day / delayed",
+   "What nurse should do": "'Not found' does not mean not scheduled"
+  },
+  {
+   "Member ID": "NX-005",
+   "Dataset": "Care plan & tasks",
+   "Source": "Care management",
+   "Sample fact": "Confirm appointment with maternity team; assess transport; document follow-up",
+   "Quality flag": "Draft recommendation",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Nurse review and approve"
+  },
+  {
+   "Member ID": "NX-005",
+   "Dataset": "Identity resolution",
+   "Source": "Master member index",
+   "Sample fact": "Appointment feed delayed; transport need unconfirmed",
+   "Quality flag": "Potential exception",
+   "Freshness (illustrative)": "Current",
+   "What nurse should do": "Resolve before merge or action"
+  }
+ ],
+ "Data Dictionary": [
+  {
+   "Dataset": "Member & eligibility",
+   "Source": "Payer membership",
+   "Key fields": "ID, plan, PCP, language, eligibility",
+   "Expected freshness": "Daily / change",
+   "Common quality issue": "Stale demographics / duplicate IDs",
+   "Handling / product behaviour": "Cross-source match; effective dates; source provenance",
+   "MVP priority": "Must-have"
+  },
+  {
+   "Dataset": "ADT events",
+   "Source": "Hospital / HIE feed",
+   "Key fields": "Admission, discharge, transfer, facility, event time",
+   "Expected freshness": "Minutes-hours where supported",
+   "Common quality issue": "Missing discharge details / duplicate alerts",
+   "Handling / product behaviour": "Deduplicate; retain event time and received time",
+   "MVP priority": "Must-have"
+  },
+  {
+   "Dataset": "Clinical records",
+   "Source": "EHR / CCD / FHIR",
+   "Key fields": "Conditions, encounters, notes, discharge summary",
+   "Expected freshness": "Hours-days",
+   "Common quality issue": "Narrative / coding variation",
+   "Handling / product behaviour": "Terminology mapping; NLP extraction with review",
+   "MVP priority": "Must-have"
+  },
+  {
+   "Dataset": "Medication & pharmacy",
+   "Source": "PBM / pharmacy",
+   "Key fields": "Orders, fills, days supply, medication reconciliation",
+   "Expected freshness": "Hours-days",
+   "Common quality issue": "Order ≠ fill ≠ adherence",
+   "Handling / product behaviour": "Keep concepts separate; never infer ingestion",
+   "MVP priority": "Must-have"
+  },
+  {
+   "Dataset": "Medical claims",
+   "Source": "Payer claims",
+   "Key fields": "Diagnoses, procedures, utilisation",
+   "Expected freshness": "Weeks; plan-dependent",
+   "Common quality issue": "Lag, reversals, runout",
+   "Handling / product behaviour": "Show service date and lag; historical context only",
+   "MVP priority": "Must-have"
+  },
+  {
+   "Dataset": "Labs & vitals",
+   "Source": "Labs / EHR",
+   "Key fields": "HbA1c, BP, weight, creatinine",
+   "Expected freshness": "Hours-days",
+   "Common quality issue": "Missing units / delayed results",
+   "Handling / product behaviour": "Normalise units; preserve reference range and collection date",
+   "MVP priority": "Must-have"
+  },
+  {
+   "Dataset": "Contact history",
+   "Source": "CRM / telephony",
+   "Key fields": "Attempts, outcome, channel, language, consent",
+   "Expected freshness": "At interaction",
+   "Common quality issue": "Wrong number / stale preference",
+   "Handling / product behaviour": "Verify contact; audit attempts",
+   "MVP priority": "Must-have"
+  },
+  {
+   "Dataset": "SDOH / HRA",
+   "Source": "Health risk assessment",
+   "Key fields": "Housing, food, transport, caregiver",
+   "Expected freshness": "Weeks-months",
+   "Common quality issue": "Stale / sensitive self-report",
+   "Handling / product behaviour": "Show collected date; reconfirm before referral",
+   "MVP priority": "Must-have"
+  },
+  {
+   "Dataset": "Appointments & referrals",
+   "Source": "Provider scheduling",
+   "Key fields": "Scheduled, completed, missed, referral status",
+   "Expected freshness": "Near-real-time to daily",
+   "Common quality issue": "External schedule not synced",
+   "Handling / product behaviour": "Show 'not found'; confirm externally",
+   "MVP priority": "Must-have"
+  },
+  {
+   "Dataset": "Care plans & tasks",
+   "Source": "Care-management platform",
+   "Key fields": "Goals, interventions, owner, due date, outcome",
+   "Expected freshness": "At update",
+   "Common quality issue": "Duplicate / unclosed tasks",
+   "Handling / product behaviour": "Single owner; task state transitions; audit",
+   "MVP priority": "Must-have"
+  },
+  {
+   "Dataset": "Authorisations",
+   "Source": "Utilisation management",
+   "Key fields": "Approval, denial, pending service",
+   "Expected freshness": "At decision",
+   "Common quality issue": "Status changes",
+   "Handling / product behaviour": "Show effective period and source",
+   "MVP priority": "Later"
+  },
+  {
+   "Dataset": "Provider & capacity",
+   "Source": "Directory / workforce",
+   "Key fields": "Network, specialty, licence, caseload, language",
+   "Expected freshness": "Daily / change",
+   "Common quality issue": "Stale directory / capacity",
+   "Handling / product behaviour": "Eligibility first; capacity-aware routing second",
+   "MVP priority": "Later"
+  }
+ ],
+ "Priority Model": [
+  {
+   "Factor / rule": "Clinical acuity",
+   "Weight / formula": 40,
+   "Scale": "0–100",
+   "Interpretation": "Recent discharge, acute event, high-risk programme",
+   "Guardrail": "Clinically governed; no autonomous diagnosis"
+  },
+  {
+   "Factor / rule": "Time sensitivity",
+   "Weight / formula": 25,
+   "Scale": "0–100",
+   "Interpretation": "Due date, discharge follow-up window, overdue task",
+   "Guardrail": "Programme-specific SLA; show due time"
+  },
+  {
+   "Factor / rule": "Care-gap severity",
+   "Weight / formula": 20,
+   "Scale": "0–100",
+   "Interpretation": "Medication access, missed visit, incomplete referral",
+   "Guardrail": "Unknown ≠ confirmed gap"
+  },
+  {
+   "Factor / rule": "Access barriers",
+   "Weight / formula": 15,
+   "Scale": "0–100",
+   "Interpretation": "Transport, language, caregiver, contact difficulty",
+   "Guardrail": "Do not penalise patients for social needs"
+  },
+  {
+   "Factor / rule": "Formula",
+   "Weight / formula": "0.40A + 0.25T + 0.20G + 0.15B",
+   "Scale": "0–100",
+   "Interpretation": "Weighted operational priority",
+   "Guardrail": "Not a clinical risk score"
+  },
+  {
+   "Factor / rule": "High band",
+   "Weight / formula": "≥75",
+   "Scale": "",
+   "Interpretation": "Work within urgent programme SLA",
+   "Guardrail": "Threshold requires clinical approval"
+  },
+  {
+   "Factor / rule": "Medium band",
+   "Weight / formula": "50–74",
+   "Scale": "",
+   "Interpretation": "Work within programme queue",
+   "Guardrail": "Threshold requires validation"
+  },
+  {
+   "Factor / rule": "Routine band",
+   "Weight / formula": "<50",
+   "Scale": "",
+   "Interpretation": "Routine cadence / monitoring",
+   "Guardrail": "Threshold requires validation"
+  }
+ ],
+ "Task Queue": [
+  {
+   "Task ID": "T-001-01",
+   "Member ID": "NX-001",
+   "Priority": "High",
+   "Task / next action": "Call today; reconcile medication; confirm follow-up; assess transport",
+   "Status": "Open",
+   "Due date": "2026-11-06",
+   "Owner": "Maria Chen",
+   "Approval": "Nurse review required",
+   "Evidence / rationale": "Claims feed 32 days old; medication conflict"
+  },
+  {
+   "Task ID": "T-002-01",
+   "Member ID": "NX-002",
+   "Priority": "Medium",
+   "Task / next action": "Confirm medication access; request current HbA1c; discuss food support",
+   "Status": "Open",
+   "Due date": "2026-11-06",
+   "Owner": "Maria Chen",
+   "Approval": "Nurse review required",
+   "Evidence / rationale": "Latest HbA1c missing; pharmacy feed delayed"
+  },
+  {
+   "Task ID": "T-003-01",
+   "Member ID": "NX-003",
+   "Priority": "High",
+   "Task / next action": "Resolve identity; verify alternate consented contact; coordinate PCP follow-up",
+   "Status": "Open",
+   "Due date": "2026-11-06",
+   "Owner": "David Ortiz",
+   "Approval": "Nurse review required",
+   "Evidence / rationale": "Possible duplicate identity NX-003A"
+  },
+  {
+   "Task ID": "T-004-01",
+   "Member ID": "NX-004",
+   "Priority": "Medium",
+   "Task / next action": "Use approved Spanish outreach; reconfirm safe contact; offer social-work referral",
+   "Status": "Open",
+   "Due date": "2026-11-06",
+   "Owner": "Maria Chen",
+   "Approval": "Nurse review required",
+   "Evidence / rationale": "SDOH screen 7 months old; contact preference unverified"
+  },
+  {
+   "Task ID": "T-005-01",
+   "Member ID": "NX-005",
+   "Priority": "High",
+   "Task / next action": "Confirm appointment with maternity team; assess transport; document follow-up",
+   "Status": "Open",
+   "Due date": "2026-11-06",
+   "Owner": "David Ortiz",
+   "Approval": "Nurse review required",
+   "Evidence / rationale": "Appointment feed delayed; transport need unconfirmed"
+  }
+ ],
+ "KPI Definitions": [
+  {
+   "Metric": "Case preparation time",
+   "Definition": "Median minutes from case open to ready for outreach",
+   "Baseline method": "Baseline time-and-motion study",
+   "Proposed target": "−40% vs baseline",
+   "Measurement source": "Product analytics + observation",
+   "Type": "Efficiency"
+  },
+  {
+   "Metric": "Documentation time",
+   "Definition": "Median minutes per interaction for required documentation",
+   "Baseline method": "Workflow observation",
+   "Proposed target": "−30% vs baseline",
+   "Measurement source": "Time stamps + nurse observation",
+   "Type": "Efficiency"
+  },
+  {
+   "Metric": "Time-bound discharge outreach",
+   "Definition": "Eligible discharges contacted within programme-defined 2-business-day target",
+   "Baseline method": "Establish current eligible denominator and rate",
+   "Proposed target": "≥90% pilot hypothesis",
+   "Measurement source": "ADT + contact logs",
+   "Type": "Care process"
+  },
+  {
+   "Metric": "Successful connection rate",
+   "Definition": "Connected contacts ÷ valid outreach attempts",
+   "Baseline method": "Baseline by channel/population",
+   "Proposed target": "+10% relative improvement",
+   "Measurement source": "CRM / telephony outcomes",
+   "Type": "Engagement"
+  },
+  {
+   "Metric": "Priority task SLA completion",
+   "Definition": "High-priority tasks completed within due window ÷ tasks due",
+   "Baseline method": "Baseline from task logs",
+   "Proposed target": "≥90% pilot hypothesis",
+   "Measurement source": "Task events",
+   "Type": "Operations"
+  },
+  {
+   "Metric": "High-risk conflict visibility",
+   "Definition": "High-risk conflicts surfaced ÷ detected high-risk conflicts",
+   "Baseline method": "QA test set",
+   "Proposed target": "100% surfaced; no silent overwrite",
+   "Measurement source": "Data-quality audit",
+   "Type": "Trust"
+  },
+  {
+   "Metric": "Weekly active case managers",
+   "Definition": "Weekly active users ÷ enabled users",
+   "Baseline method": "Pilot baseline",
+   "Proposed target": "≥80% by week 4 hypothesis",
+   "Measurement source": "Product analytics",
+   "Type": "Adoption"
+  },
+  {
+   "Metric": "AI draft acceptance",
+   "Definition": "Draft fields accepted without material correction ÷ reviewed fields",
+   "Baseline method": "Shadow-mode baseline",
+   "Proposed target": "Measure first; set target after QA",
+   "Measurement source": "Human-review audit",
+   "Type": "AI quality"
+  },
+  {
+   "Metric": "Call transcription consent capture rate",
+   "Definition": "Permitted recording sessions with documented consent / all sessions in which recording was attempted",
+   "Baseline method": "Start in shadow/sandbox; verify policy states",
+   "Proposed target": "100% of recorded sessions have valid consent/policy evidence",
+   "Measurement source": "Consent registry + call event log",
+   "Type": "Safety / compliance"
+  },
+  {
+   "Metric": "ASR critical-field accuracy",
+   "Definition": "Correctly transcribed critical clinical entities (drug, dose, date, symptom) / audited critical entities",
+   "Baseline method": "Gold-labelled, clinician-reviewed test calls",
+   "Proposed target": "Set threshold after validation; 100% of uncertain items flagged",
+   "Measurement source": "Clinical QA sample",
+   "Type": "AI quality"
+  },
+  {
+   "Metric": "AI note material correction rate",
+   "Definition": "Draft notes with material clinical corrections / all draft notes reviewed",
+   "Baseline method": "Shadow-mode audit",
+   "Proposed target": "Trend down; no fixed claim until baseline",
+   "Measurement source": "Review/approval logs",
+   "Type": "AI quality"
+  },
+  {
+   "Metric": "Copilot grounded answer rate",
+   "Definition": "Copilot responses with valid source evidence / responses audited",
+   "Baseline method": "QA set of member and policy questions",
+   "Proposed target": "≥95% target hypothesis before production; no unsupported clinical answer",
+   "Measurement source": "Copilot audit and QA",
+   "Type": "AI quality"
+  },
+  {
+   "Metric": "Authorised contact route compliance",
+   "Definition": "Outreach attempts routed to a contact with valid relationship, authority/permission scope and channel / all third-party attempts",
+   "Baseline method": "Baseline audit of contact records",
+   "Proposed target": "100% third-party attempts pass permission check",
+   "Measurement source": "Contact and outreach audit logs",
+   "Type": "Privacy / operations"
+  },
+  {
+   "Metric": "Contact reachability rate",
+   "Definition": "Successful contact attempts / attempts to verified, permitted contacts",
+   "Baseline method": "Baseline by contact type, programme and time window",
+   "Proposed target": "Set after baseline; track member vs authorised contact separately",
+   "Measurement source": "CRM / telephony disposition",
+   "Type": "Engagement"
+  }
+ ],
+ "Risks": [
+  {
+   "Risk": "Wrong member match",
+   "Severity": "High",
+   "Failure mode": "Wrong-patient action",
+   "Mitigation": "Deterministic IDs first; confidence threshold; manual review; no weak auto-merge",
+   "Domain": "Data safety"
+  },
+  {
+   "Risk": "Stale / conflicting facts",
+   "Severity": "High",
+   "Failure mode": "Incorrect decision from old data",
+   "Mitigation": "Source, event time, received time, conflict and reviewer visible",
+   "Domain": "Data trust"
+  },
+  {
+   "Risk": "AI hallucination / omission",
+   "Severity": "High",
+   "Failure mode": "Unsupported note / inaccurate summary",
+   "Mitigation": "Source-grounded drafts; human approval; edit audit",
+   "Domain": "AI governance"
+  },
+  {
+   "Risk": "Alert fatigue",
+   "Severity": "Medium",
+   "Failure mode": "Queue ignored",
+   "Mitigation": "Deduplicate; tune thresholds; monitor overrides",
+   "Domain": "Adoption"
+  },
+  {
+   "Risk": "Privacy / outreach",
+   "Severity": "High",
+   "Failure mode": "Disclosure to wrong person/channel",
+   "Mitigation": "Consent-aware contact; role access; minimum necessary; audit",
+   "Domain": "Privacy"
+  },
+  {
+   "Risk": "Workflow integration",
+   "Severity": "Medium",
+   "Failure mode": "Double entry persists",
+   "Mitigation": "Read + draft first; fallback and reconciliation",
+   "Domain": "Delivery"
+  },
+  {
+   "Risk": "Bias in prioritisation",
+   "Severity": "High",
+   "Failure mode": "Unequal prioritisation",
+   "Mitigation": "Clinical governance; subgroup review; exclude protected attributes",
+   "Domain": "Fairness"
+  }
+ ],
+ "Contact Directory": [
+  {
+   "Member ID": "NX-001",
+   "Contact ID": "CT-NX001-0",
+   "Contact name": "John Mitchell",
+   "Contact type": "Member",
+   "Relationship": "Self",
+   "Phone (fictional)": "(555) 0101",
+   "Verification status": "Verified",
+   "Permission / authority evidence": "Member record",
+   "Permitted scope": "Member's own care coordination",
+   "Prohibited / restricted disclosure": "Apply normal identity verification",
+   "Preferred channel": "Phone",
+   "Availability window": "Weekdays 08:00–18:00",
+   "Language": "English",
+   "Source": "Payer membership / contact record",
+   "Last verified / reviewed": "2026-11-01",
+   "Routing notes": "Primary contact; recently discharged"
+  },
+  {
+   "Member ID": "NX-001",
+   "Contact ID": "CT-NX001-1",
+   "Contact name": "Ellen Mitchell",
+   "Contact type": "Member-designated care contact",
+   "Relationship": "Spouse",
+   "Phone (fictional)": "(555) 0191",
+   "Verification status": "Verified",
+   "Permission / authority evidence": "Documented member permission in synthetic case record",
+   "Permitted scope": "Discharge coordination, transport and medication-access logistics only",
+   "Prohibited / restricted disclosure": "No wider clinical disclosure; no medication changes",
+   "Preferred channel": "Phone",
+   "Availability window": "Weekdays 09:00–17:00",
+   "Language": "English",
+   "Source": "Member-provided contact / permission record",
+   "Last verified / reviewed": "2026-10-20",
+   "Routing notes": "Fallback only if member unavailable; verify permission remains active"
+  },
+  {
+   "Member ID": "NX-002",
+   "Contact ID": "CT-NX002-0",
+   "Contact name": "Evelyn Brooks",
+   "Contact type": "Member",
+   "Relationship": "Self",
+   "Phone (fictional)": "(555) 0102",
+   "Verification status": "Verified",
+   "Permission / authority evidence": "Member record",
+   "Permitted scope": "Member's own care coordination",
+   "Prohibited / restricted disclosure": "Apply normal identity verification",
+   "Preferred channel": "Phone",
+   "Availability window": "Weekdays 09:00–19:00",
+   "Language": "English",
+   "Source": "Payer membership / contact record",
+   "Last verified / reviewed": "2026-11-01",
+   "Routing notes": "Primary contact"
+  },
+  {
+   "Member ID": "NX-002",
+   "Contact ID": "CT-NX002-1",
+   "Contact name": "Laura Brooks",
+   "Contact type": "Member-designated care contact",
+   "Relationship": "Sister",
+   "Phone (fictional)": "(555) 0192",
+   "Verification status": "Verified",
+   "Permission / authority evidence": "Documented member permission in synthetic case record",
+   "Permitted scope": "Appointment logistics and transport coordination",
+   "Prohibited / restricted disclosure": "No broader clinical disclosure",
+   "Preferred channel": "Phone",
+   "Availability window": "Weekdays 17:00–20:00",
+   "Language": "English",
+   "Source": "Member-provided contact / permission record",
+   "Last verified / reviewed": "2026-10-25",
+   "Routing notes": "Fallback for scheduling/logistics only"
+  },
+  {
+   "Member ID": "NX-003",
+   "Contact ID": "CT-NX003-0",
+   "Contact name": "Robert Hayes",
+   "Contact type": "Member",
+   "Relationship": "Self",
+   "Phone (fictional)": "(555) 0103",
+   "Verification status": "Disconnected",
+   "Permission / authority evidence": "Member record",
+   "Permitted scope": "Member's own care coordination",
+   "Prohibited / restricted disclosure": "Do not repeatedly call disconnected number",
+   "Preferred channel": "Phone",
+   "Availability window": "Evenings preferred",
+   "Language": "English",
+   "Source": "Payer membership / contact record",
+   "Last verified / reviewed": "2026-11-05",
+   "Routing notes": "Primary number not reachable"
+  },
+  {
+   "Member ID": "NX-003",
+   "Contact ID": "CT-NX003-1",
+   "Contact name": "James Hayes",
+   "Contact type": "Member-designated care contact",
+   "Relationship": "Adult son",
+   "Phone (fictional)": "(555) 0193",
+   "Verification status": "Verified",
+   "Permission / authority evidence": "Permission recorded in synthetic case; reconfirm identity and current scope",
+   "Permitted scope": "Assist with outreach coordination",
+   "Prohibited / restricted disclosure": "No disclosure of detailed clinical information until permitted scope is re-confirmed",
+   "Preferred channel": "Phone",
+   "Availability window": "Weekdays 17:00–20:00",
+   "Language": "English",
+   "Source": "Member-provided contact / permission record",
+   "Last verified / reviewed": "2026-10-15",
+   "Routing notes": "Use only after identity and permission checks"
+  },
+  {
+   "Member ID": "NX-004",
+   "Contact ID": "CT-NX004-0",
+   "Contact name": "Alicia Rivera",
+   "Contact type": "Member",
+   "Relationship": "Self",
+   "Phone (fictional)": "(555) 0104",
+   "Verification status": "Unverified",
+   "Permission / authority evidence": "Member record; safe contact preference not confirmed",
+   "Permitted scope": "Member-directed contact only after safe channel verification",
+   "Prohibited / restricted disclosure": "Do not contact family / third parties; privacy-sensitive case",
+   "Preferred channel": "Portal / channel to be confirmed",
+   "Availability window": "Unknown",
+   "Language": "Spanish",
+   "Source": "Payer membership / prior contact record",
+   "Last verified / reviewed": "2026-10-18",
+   "Routing notes": "Escalate to supervisor if no safe route identified"
+  },
+  {
+   "Member ID": "NX-005",
+   "Contact ID": "CT-NX005-0",
+   "Contact name": "Nina Patel",
+   "Contact type": "Member",
+   "Relationship": "Self",
+   "Phone (fictional)": "(555) 0105",
+   "Verification status": "Verified",
+   "Permission / authority evidence": "Member record",
+   "Permitted scope": "Member's own care coordination",
+   "Prohibited / restricted disclosure": "Apply normal identity verification",
+   "Preferred channel": "Phone",
+   "Availability window": "Weekdays 08:00–18:00",
+   "Language": "English",
+   "Source": "Payer membership / contact record",
+   "Last verified / reviewed": "2026-11-01",
+   "Routing notes": "Primary contact"
+  },
+  {
+   "Member ID": "NX-005",
+   "Contact ID": "CT-NX005-1",
+   "Contact name": "Arjun Patel",
+   "Contact type": "Member-designated care contact",
+   "Relationship": "Spouse",
+   "Phone (fictional)": "(555) 0195",
+   "Verification status": "Verified",
+   "Permission / authority evidence": "Documented member permission in synthetic case record",
+   "Permitted scope": "Appointment and transport logistics only",
+   "Prohibited / restricted disclosure": "Clinical details remain member-directed unless separately authorised",
+   "Preferred channel": "Phone",
+   "Availability window": "Weekdays 18:00–20:00",
+   "Language": "English",
+   "Source": "Member-provided contact / permission record",
+   "Last verified / reviewed": "2026-10-22",
+   "Routing notes": "Fallback for logistics only"
+  }
+ ],
+ "Contact Routing Rules": [
+  {
+   "Case / contact condition": "Member is in an inpatient facility",
+   "Preferred outreach target": "Hospital care coordinator / discharge planner for transition coordination",
+   "Fallback": "Member-designated care contact or legal personal representative only where permitted",
+   "System behaviour": "Do not default to repeated direct calls to an admitted member; show inpatient status and planned discharge coordination task",
+   "Disclosure control": "Verify role, identity, purpose and permitted information; minimum necessary",
+   "Escalation / next step": "Set discharge follow-up trigger; after discharge, contact member/caregiver under applicable programme workflow"
+  },
+  {
+   "Case / contact condition": "Recently discharged; member available",
+   "Preferred outreach target": "Member directly",
+   "Fallback": "Authorised/designated care contact within documented scope",
+   "System behaviour": "Member-first; show due window and call brief",
+   "Disclosure control": "Confirm identity; ask/verify if another person may participate",
+   "Escalation / next step": "If no answer, use only approved channel and policy-defined retries"
+  },
+  {
+   "Case / contact condition": "Member unreachable / disconnected number",
+   "Preferred outreach target": "Resolve contact data; do not repeatedly retry invalid number",
+   "Fallback": "Verified authorised care contact, only within permission scope",
+   "System behaviour": "Flag invalid number; show alternate relationship, authorisation evidence, scope, channel and availability",
+   "Disclosure control": "Emergency contact alone does not automatically permit PHI disclosure",
+   "Escalation / next step": "Update contact record after verification; escalate if no safe route"
+  },
+  {
+   "Case / contact condition": "Member incapacitated / lacks decision capacity",
+   "Preferred outreach target": "Legal personal representative where verified, or permitted involvement under applicable HIPAA rules and professional judgement",
+   "Fallback": "Care team / authorised contact where appropriate",
+   "System behaviour": "Display legal authority type, scope, evidence and expiry/review date",
+   "Disclosure control": "Do not infer legal authority from family relationship alone",
+   "Escalation / next step": "Escalate uncertainty to privacy/compliance or clinical supervisor"
+  },
+  {
+   "Case / contact condition": "Privacy-sensitive / unsafe-contact flag",
+   "Preferred outreach target": "Member-approved safe channel only",
+   "Fallback": "No alternate contact unless specifically authorised",
+   "System behaviour": "Suppress unapproved contacts from outreach suggestions",
+   "Disclosure control": "Never expose sensitive details on voicemail/text or to unauthorised contacts",
+   "Escalation / next step": "Supervisor review if no safe communication route"
+  },
+  {
+   "Case / contact condition": "Caregiver is emergency contact only",
+   "Preferred outreach target": "Member directly (unless specific exception applies)",
+   "Fallback": "No routine PHI disclosure to emergency contact",
+   "System behaviour": "Display 'emergency contact — not automatically authorised for PHI'",
+   "Disclosure control": "Use only the permitted notification / emergency pathway",
+   "Escalation / next step": "Obtain member permission or verify legal representative status"
+  }
+ ],
+ "Call AI Workflow": [
+  {
+   "Stage": "1. Call initiation",
+   "Component / model": "Approved telephony integration",
+   "Input": "Selected member; case context; call target; consent and jurisdiction settings",
+   "Output": "Call session and target contact",
+   "Guardrail / human control": "Verify member/contact identity, permission scope and safe time/channel before call",
+   "MVP priority": "Must"
+  },
+  {
+   "Stage": "2. Consent gate",
+   "Component / model": "Policy rules + consent registry",
+   "Input": "Caller/callee location, health-plan policy, recording purpose, participant consent",
+   "Output": "Recording/transcription permitted: Yes/No; consent evidence and timestamp",
+   "Guardrail / human control": "Default recording OFF; require applicable consent; stop capture if declined/withdrawn; legal review by jurisdiction",
+   "MVP priority": "Must"
+  },
+  {
+   "Stage": "3. Audio capture",
+   "Component / model": "Encrypted call audio stream / recording service",
+   "Input": "Live call audio, only when permitted",
+   "Output": "Temporary audio stream and/or recording object",
+   "Guardrail / human control": "Visible recording indicator; least-privilege access; encryption; retention policy; vendor BAA where vendor processes ePHI",
+   "MVP priority": "Should"
+  },
+  {
+   "Stage": "4. Speech recognition",
+   "Component / model": "ASR (Automatic Speech Recognition)",
+   "Input": "Permitted audio stream",
+   "Output": "Timestamped transcript with speaker labels where reliable",
+   "Guardrail / human control": "Clinical vocabulary evaluation; mark low-confidence words; no silently guessed medication/dose",
+   "MVP priority": "Should"
+  },
+  {
+   "Stage": "5. Clinical extraction",
+   "Component / model": "NLP / entity extraction",
+   "Input": "Transcript + selected member context",
+   "Output": "Candidate symptoms, meds, barriers, appointment status, patient-reported facts, follow-up commitments",
+   "Guardrail / human control": "Preserve verbatim evidence and source; distinguish patient report from verified source",
+   "MVP priority": "Should"
+  },
+  {
+   "Stage": "6. Structured drafting",
+   "Component / model": "LLM + retrieval from authorised member records and approved templates",
+   "Input": "Transcript, extracted entities, care plan, form schema and relevant source snippets",
+   "Output": "Draft contact note, assessment fields, care-plan suggestions and task drafts",
+   "Guardrail / human control": "Ground output in sources; unsupported fields remain blank/unknown; do not diagnose or prescribe",
+   "MVP priority": "Should"
+  },
+  {
+   "Stage": "7. Validation",
+   "Component / model": "Deterministic validators + terminology checks",
+   "Input": "Draft fields and source facts",
+   "Output": "Conflict flags, missing fields, confidence / evidence indicators",
+   "Guardrail / human control": "Check member identity, dates, units and medication conflicts; do not auto-resolve clinical conflicts",
+   "MVP priority": "Must"
+  },
+  {
+   "Stage": "8. Nurse review",
+   "Component / model": "Human-in-the-loop review UI",
+   "Input": "Draft, transcript, source evidence, conflicts",
+   "Output": "Approved / edited / rejected note and tasks",
+   "Guardrail / human control": "Nurse reviews each material field and explicitly approves; log edits and sign-off",
+   "MVP priority": "Must"
+  },
+  {
+   "Stage": "9. Write-back",
+   "Component / model": "Case management / EHR API / FHIR Task, Communication, CarePlan where supported",
+   "Input": "Approved artifacts",
+   "Output": "Approved note, task, care-plan update, audit record",
+   "Guardrail / human control": "Only to authorised systems; idempotency and acknowledgement; no write-back in demo",
+   "MVP priority": "Later / integration-dependent"
+  },
+  {
+   "Stage": "10. Retention & audit",
+   "Component / model": "Retention policy + audit logging",
+   "Input": "Audio, transcript, draft, approvals",
+   "Output": "Retention/deletion state and audit trail",
+   "Guardrail / human control": "Health-plan policy and law define retention; avoid indefinite audio storage; BAA and security review",
+   "MVP priority": "Must"
+  }
+ ],
+ "AI Copilot": [
+  {
+   "Capability": "Explain queue",
+   "Example user prompt": "Why is NX-001 High priority today?",
+   "Context / retrieval source": "Selected member; factor scores; ADT event; unresolved gaps",
+   "Response behaviour": "Explain factor contribution, latest change and source timestamps",
+   "Allowed action": "Read-only answer with evidence links",
+   "Guardrail": "No autonomous reprioritisation; nurse can request review"
+  },
+  {
+   "Capability": "Member summary",
+   "Example user prompt": "Summarise this member's recent events in 5 bullets.",
+   "Context / retrieval source": "Authorised Member 360 records, timeline, clinical note snippets",
+   "Response behaviour": "Short source-grounded summary; label patient-reported vs source-verified",
+   "Allowed action": "Read-only answer",
+   "Guardrail": "No unsupported inference; disclose missing data"
+  },
+  {
+   "Capability": "Conflict explanation",
+   "Example user prompt": "Which medication records conflict and what should I verify?",
+   "Context / retrieval source": "MedicationRequest, MedicationDispense, MedicationStatement and source history",
+   "Response behaviour": "Show values side-by-side and identify confirmation questions",
+   "Allowed action": "Draft reconciliation checklist",
+   "Guardrail": "Never choose dose or recommend medication change"
+  },
+  {
+   "Capability": "Call preparation",
+   "Example user prompt": "Prepare a call brief and 4 questions for NX-001.",
+   "Context / retrieval source": "Member 360, contact routing, care plan and prior contact history",
+   "Response behaviour": "Generate member-specific pre-call brief",
+   "Allowed action": "Create draft brief",
+   "Guardrail": "Verify safe contact target and permission scope"
+  },
+  {
+   "Capability": "Workflow help",
+   "Example user prompt": "What does 'not found' mean for appointment data?",
+   "Context / retrieval source": "Approved product help and data dictionary",
+   "Response behaviour": "Explain that absence from connected feed is not proof no appointment exists",
+   "Allowed action": "Read-only answer",
+   "Guardrail": "Cite source/system and freshness"
+  },
+  {
+   "Capability": "Draft task",
+   "Example user prompt": "Draft a follow-up task to confirm transport support.",
+   "Context / retrieval source": "Approved member context and user-provided intent",
+   "Response behaviour": "Draft task title, owner role and due date suggestion",
+   "Allowed action": "Draft only; explicit nurse approval",
+   "Guardrail": "No task dispatch without user confirmation"
+  },
+  {
+   "Capability": "Policy / protocol query",
+   "Example user prompt": "What is the programme's post-discharge contact window?",
+   "Context / retrieval source": "Approved health-plan protocol / configured programme rules",
+   "Response behaviour": "Return configured programme rule and version/date",
+   "Allowed action": "Read-only answer",
+   "Guardrail": "Do not substitute generic CMS guidance for plan-specific protocol"
+  }
+ ],
+ "_meta": {
+  "workbook": "NEXUS_Updated_Product_Data_Annex.xlsx",
+  "sha256": "8997832eb16a7492",
+  "built": "2026-11-06T16:18:37"
+ }
+}
